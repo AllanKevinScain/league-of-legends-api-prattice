@@ -1,0 +1,30 @@
+.container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(8,46,55);
+  background: linear-gradient(180deg, rgba(8,46,55,1) 40%, rgba(1,10,19,1) 100%);
+  padding: 6px 10px 6px 10px;
+  margin-bottom: 50px;
+}
+
+.riot-logo {
+  width: 8rem;
+}
+.riot-logo:hover {
+  scale: 1.1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  height: fit-content;
+}
+.nav-links {
+  
+  height: fit-content;
+}
+

@@ -1,0 +1,39 @@
+.container-card {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  max-width: 20rem;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+
+.thumbnail {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+}
+
+.tittle {
+  text-align: center;
+  color: #313131;
+  font-weight: bold;
+}
+
+.meet-link {
+  text-align: end;
+  color: #313131;
+  font-size: 0.7em;
+  font-weight: normal;
+}
+
+.meet-link a {
+  text-decoration: underline;
+}
+.meet-link a:hover {
+  color: #0777d3;
+  transition: all 0.3s;
+}
