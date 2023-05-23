@@ -1,20 +1,23 @@
-import { useCallback, useEffect, useState } from 'react';
-import { CardList, Header } from './components';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { CardList, Header/* , Navigation */ } from './components';
 import { getChampions } from './utils/get-champions';
+import { transformData } from './helpers';
 
 export const  App = () => {
-  const [champions, setChampions] = useState();
+  const [champions, setChampions] = useState([]);
+  const [search, setSearch] = useState('');
+
+  const filteredChampions = useMemo(() => {
+    const filtered = champions.filter(champ => champ.championName.toLowerCase().includes(search.toLowerCase()));
+    
+    return !!search ? filtered : champions;
+  }, [search, champions]);
+
+  const handleChange = (e) => setSearch(e.target.value);
 
   const handleLoadChampion = useCallback(async () => {
     const postsAndPhotos = await getChampions();
-    console.log("🚀 ~ file: App.js:10 ~ handleLoadChampion ~ postsAndPhotos:", postsAndPhotos)
-
-    const trsansformData = Object.values(postsAndPhotos.data).map((champion) => ({
-      history: champion.blurb,
-      id: crypto.randomUUID(),
-      championName: champion.id,
-      nickName: champion.title
-    }));
+    const trsansformData = transformData(postsAndPhotos.data);
 
     return setChampions(trsansformData)
   }, []);
@@ -24,9 +27,10 @@ export const  App = () => {
   }, [handleLoadChampion]);
 
   return (
-      <div>
-        <Header />
-        <CardList champions={champions} />
-      </div>
+      <>
+        <Header value={search} handleChange={handleChange} />
+        {/* <Navigation /> */}
+        <CardList champions={filteredChampions} />
+      </>
   );
 }

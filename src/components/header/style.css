@@ -6,7 +6,12 @@
   background: rgb(8,46,55);
   background: linear-gradient(180deg, rgba(8,46,55,1) 40%, rgba(1,10,19,1) 100%);
   padding: 6px 10px 6px 10px;
+  max-width: 1236px;
+  margin: 0 auto;
   margin-bottom: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: all 0.3s;
 }
 
 .riot-logo {
@@ -24,7 +29,28 @@
   height: fit-content;
 }
 .nav-links {
-  
   height: fit-content;
 }
 
+.search-styles {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  background-color: #121212;
+  color: #ffffffE0;
+  border: none;
+  border-radius: 10px;
+  max-width: 30%;
+  padding: 0 20px;
+}
+
+.search-styles:focus {
+  box-shadow: 1px 4px 30px -8px #8CFF85;
+}
+
+@media (max-width: 1236px)
+{
+  .container-header {
+    border-radius: 0;
+  }
+}
