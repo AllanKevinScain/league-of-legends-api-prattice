@@ -3,7 +3,7 @@ const transformData = (response = []) => {
     history: champion.blurb,
     id: crypto.randomUUID(),
     championName: champion.id,
-    nickName: champion.title
+    nickname: champion.title
   }));
 
   return trsansformData;

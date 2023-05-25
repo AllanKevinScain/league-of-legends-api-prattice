@@ -1,0 +1,34 @@
+.drawer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+
+.blur-container {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  background-color:rgba(0, 0, 0, 0.411);
+}
+
+.drawer-body {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+  background: #2D3748;
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.drawer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: fit-content;
+}
