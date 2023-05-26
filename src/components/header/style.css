@@ -8,7 +8,7 @@
   padding: 6px 10px 6px 10px;
   max-width: 1236px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  width: 100%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   transition: all 0.3s;
