@@ -45,9 +45,13 @@
   box-shadow: 1px 4px 30px -8px #8CFF85;
 }
 
-@media (max-width: 1236px)
-{
+@media (max-width: 1236px) {
   .container-header {
     border-radius: 0;
+  }
+
+  .riot-logo {
+    width: 4rem;
+    object-fit: cover;
   }
 }
