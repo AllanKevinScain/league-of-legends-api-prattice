@@ -1,3 +1,4 @@
+import P from 'prop-types';
 import { CloseIcon } from '../icons';
 
 import './style.css';
@@ -24,4 +25,14 @@ export const Drawer = ({ drawerIsOpen, onClose }) => {
       </div>
     )
   );
+};
+
+Drawer.propTypes = {
+  drawerIsOpen: P.bool.isRequired,
+  onClose: P.func.isRequired,
+};
+
+Drawer.defaultProps = {
+  drawerIsOpen: false,
+  onClose: () => null,
 };

@@ -1,3 +1,4 @@
+import P from 'prop-types';
 import './style.css';
 
 export const Navigation = ({ offset, totalPages, handleAdd, handleDecrease }) => {
@@ -24,4 +25,18 @@ export const Navigation = ({ offset, totalPages, handleAdd, handleDecrease }) =>
       )}
     </div>
   );
+};
+
+Navigation.propTypes = {
+  offset: P.number.isRequired,
+  totalPages: P.number.isRequired,
+  handleAdd: P.func.isRequired,
+  handleDecrease: P.func.isRequired,
+};
+
+Navigation.defaultProps = {
+  offset: 0,
+  totalPages: 0,
+  handleAdd: () => null,
+  handleDecrease: () => null,
 };

@@ -4,17 +4,17 @@
 
 module.exports = {
   singleQuote: true,
-  quoteProps: 'as-needed',
-  jsxSingleQuote: false,
-  bracketSameLine: true,
-  bracketSpacing: true,
+  // quoteProps: 'as-needed',
+  // jsxSingleQuote: false,
+  // bracketSameLine: true,
+  // bracketSpacing: true,
   printWidth: 120,
   tabWidth: 2,
-  useTabs: false,
+  // useTabs: false,
   semi: true,
-  trailingComma: 'none',
-  jsxBracketSameLine: false,
-  arrowParens: 'avoid',
-  htmlWhitespaceSensitivity: 'css',
-  endOfLine: 'auto'
+  trailingComma: 'all',
+  // jsxBracketSameLine: false,
+  // arrowParens: 'avoid',
+  // htmlWhitespaceSensitivity: 'css',
+  // endOfLine: 'auto'
 };

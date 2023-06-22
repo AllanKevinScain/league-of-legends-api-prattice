@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should match snpashot 1`] = `
+<div
+  class="container-card"
+>
+  <img
+    alt="thumbnail"
+    class="thumbnail"
+    src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg"
+  />
+  <h3
+    class="title"
+  >
+    Aatrox
+     - 
+    O açougueiro de quinta
+  </h3>
+  <span
+    class="meet-link"
+  >
+    Conheça mais
+     
+    <a
+      href="https://www.leagueoflegends.com/pt-br/champions/aatrox"
+      rel="noreferrer"
+      target="_blank"
+    >
+      @aqui
+    </a>
+  </span>
+</div>
+`;

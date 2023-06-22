@@ -1,3 +1,5 @@
+import P from 'prop-types';
+
 export const MenuIcon = ({ onClick, color, w, h }) => {
   return (
     <button onClick={onClick}>
@@ -6,4 +8,18 @@ export const MenuIcon = ({ onClick, color, w, h }) => {
       </svg>
     </button>
   );
+};
+
+MenuIcon.propTypes = {
+  onClick: P.func.isRequired,
+  color: P.string.isRequired,
+  w: P.number.isRequired,
+  h: P.number.isRequired,
+};
+
+MenuIcon.defaultProps = {
+  onClick: () => null,
+  color: '',
+  w: 24,
+  h: 24,
 };

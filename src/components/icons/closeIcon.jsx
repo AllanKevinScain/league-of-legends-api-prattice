@@ -1,3 +1,5 @@
+import P from 'prop-types';
+
 export const CloseIcon = ({ onClick, color, w, h }) => {
   return (
     <button onClick={onClick}>
@@ -6,4 +8,18 @@ export const CloseIcon = ({ onClick, color, w, h }) => {
       </svg>
     </button>
   );
+};
+
+CloseIcon.propTypes = {
+  onClick: P.func,
+  color: P.string,
+  w: P.number,
+  h: P.number,
+};
+
+CloseIcon.defaultProps = {
+  onClick: () => null,
+  color: '',
+  w: 30,
+  h: 30,
 };

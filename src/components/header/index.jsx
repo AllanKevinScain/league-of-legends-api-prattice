@@ -1,3 +1,4 @@
+import P from 'prop-types';
 import { useState } from 'react';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { Drawer } from '../drawer';
@@ -51,4 +52,14 @@ export const Header = ({ value, handleChange }) => {
       </li>
     </nav>
   );
+};
+
+Header.propTypes = {
+  value: P.string.isRequired,
+  handleChange: P.func.isRequired,
+};
+
+Header.defaultProps = {
+  value: '',
+  handleChange: () => null,
 };

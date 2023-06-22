@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const getWindowDimensions = () => {
   const { innerWidth: width, innerHeight: height } = window;
@@ -7,9 +7,7 @@ const getWindowDimensions = () => {
 };
 
 export const useMediaQuery = () => {
-  const [windowDimesions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+  const [windowDimesions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {
     const handleSize = () => {
@@ -22,4 +20,4 @@ export const useMediaQuery = () => {
   }, []);
 
   return windowDimesions;
-}
+};

@@ -9,12 +9,12 @@ export const App = () => {
   const [offset, setOffset] = useState(0);
 
   const filteredChampions = useMemo(() => {
-    const filtered = champions.filter(champ => champ.championName.toLowerCase().includes(search.toLowerCase()));
+    const filtered = champions.filter((champ) => champ.championName.toLowerCase().includes(search.toLowerCase()));
 
     return filtered;
   }, [champions, search]);
 
-  const handleChange = e => setSearch(e.target.value);
+  const handleChange = (e) => setSearch(e.target.value);
 
   const handleLoadChampion = useCallback(async () => {
     const postsAndPhotos = await getChampions();
@@ -31,14 +31,14 @@ export const App = () => {
     <div className="container">
       <Header value={search} handleChange={handleChange} />
 
-      <CardList champions={!!search ? filteredChampions : constructMatriz(champions, 8)[offset]} />
+      <CardList champions={search ? filteredChampions : constructMatriz(champions, 8)[offset]} />
 
       {!search && (
         <Navigation
           offset={offset}
           totalPages={constructMatriz(champions, 8).length}
-          handleAdd={() => setOffset(state => state + 1)}
-          handleDecrease={() => setOffset(state => state - 1)}
+          handleAdd={() => setOffset((state) => state + 1)}
+          handleDecrease={() => setOffset((state) => state - 1)}
         />
       )}
     </div>
